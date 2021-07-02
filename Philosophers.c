@@ -176,10 +176,10 @@ int init_threads(t_philosophers *philosophers, t_data *data)
 		{
 			pthread_mutex_lock(&philosophers->data->vs);
 			printf("%lu %d died\n", time_init() - philosophers[i].data->start,
-			philosophers->index);
+			philosophers[i].index);
 			return (0);
 		}
-		if (philosophers->number_of_times_eat >=
+		while (philosophers[data->numbers - 1].number_of_times_eat ==
 		philosophers->data->number_of_times_each_philosopher_must_eat &&
 		philosophers->data->number_of_times_each_philosopher_must_eat > 0)
 			return (0);
