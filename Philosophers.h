@@ -16,17 +16,19 @@ typedef struct	s_data
 	int number_of_times_each_philosopher_must_eat;
 	unsigned long start;
 	pthread_mutex_t *forks;
-//	pthread_mutex_t vs;
+	pthread_mutex_t vs;
 }				t_data;
 
 typedef struct	s_philosophers
 {
-	t_data data;
+	t_data *data;
 	pthread_t t;
 	int index;
 	int right_fork;
 	int left_fork;
 	int number_of_times_eat;
+	unsigned long check;
+	int eating;
 }				t_philosophers;
 
 
