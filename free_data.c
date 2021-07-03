@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Philosophers.c                                     :+:      :+:    :+:   */
+/*   free_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vping <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/03 13:13:07 by vping             #+#    #+#             */
-/*   Updated: 2021/07/03 13:13:12 by vping            ###   ########.fr       */
+/*   Created: 2021/07/03 13:26:49 by vping             #+#    #+#             */
+/*   Updated: 2021/07/03 13:26:50 by vping            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Philosophers.h"
 
-int	main(int argc, char **argv)
+int	free_data(t_data *data)
 {
-	t_data			data;
-	t_philosophers	*philo;
+	int	i;
 
-	if (!(init_data(&data, argv, argc)))
-		return (free_data(&data));
-	philo = (t_philosophers *)malloc(data.numbers * sizeof(t_philosophers));
-	if (!philo)
-		return (0);
-	init_philosophers(&philo, &data);
-	if (!(init_threads(philo, &data)))
-		return (free_all(&data, &philo));
+	i = 0;
+	while (i < data->numbers - 1)
+	{
+		pthread_mutex_destroy(&data->forks[i]);
+		i++;
+	}
+	free(data->forks);
+	return (0);
+}
+
+int	free_all(t_data *data, t_philosophers **philosophers)
+{
+	free_data(data);
+	free(*philosophers);
+	return (0);
 }
