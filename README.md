@@ -19,7 +19,7 @@ Run tests for example:
 
 ./philo 100 1000 100 100 10
 
-To stop simulation type CTRL + c 
+To stop simulation type `CTRL + c` 
 
 # Received arguments
 
