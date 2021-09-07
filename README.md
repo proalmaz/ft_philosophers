@@ -23,17 +23,17 @@ Run tests for example:
 
 To stop simulation type `CTRL + c` 
 
-# Received arguments
+## Received arguments
 
 Each program should have the same options:
 
-1. number_of_philosophers;
-2. time_to_die;
-3. time_to_eat;
-4. time_to_sleep;
-5. number_of_times_each_philosopher_must_eat (optional);
+1. number_of_philosophers
+2. time_to_die
+3. time_to_eat
+4. time_to_sleep
+5. number_of_times_each_philosopher_must_eat (optional)
 
-# Algorithm
+## Algorithm
 
 1. think until the left fork is available, when it is, pick it up
 
