@@ -33,16 +33,16 @@ Each program should have the same options:
 
 # Algorithm
 
-think until the left fork is available, when it is, pick it up;
+1. think until the left fork is available, when it is, pick it up
 
-think until the right fork is available, when it is, pick it up;
+2. think until the right fork is available, when it is, pick it up
 
-when both forks are held, eat for a fixed amount of time;
+3. when both forks are held, eat for a fixed amount of time
 
-then, put the right fork down;
+4. then, put the right fork down
 
-then, put the left fork down;
+5. then, put the left fork down
 
-repeat.
+6. repeat
 
 `Deadlock` does not happen because all philosophers take the left fork first then the right fork and the last philosopher takes the right fork and then the left.
