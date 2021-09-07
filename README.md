@@ -1,2 +1,3 @@
-In this project, I learned the basics of threading a process. I
-learned how to create threads. I discovered mutex.
+# Philo
+
+This is the simple representation of solving [Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem).
