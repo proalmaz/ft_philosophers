@@ -3,7 +3,7 @@
 This is the simple representation of solving [Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem).
 
 # Usage
-##Philosophers should avoid dying
+## Philosophers should avoid dying
 
 Run command below in your terminal;
 ```
