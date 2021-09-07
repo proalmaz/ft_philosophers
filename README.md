@@ -2,6 +2,8 @@
 
 This is the simple representation of solving [Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem).
 
+![Alt Text](https://upload.wikimedia.org/wikipedia/commons/7/7b/An_illustration_of_the_dining_philosophers_problem.png)
+
 # Usage
 ## Philosophers should avoid dying
 
